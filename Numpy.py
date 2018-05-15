@@ -223,5 +223,5 @@ print("suffled b: ", np.random.shuffle(new_b)) #####################not working
 
 ##########final exercise
 
-
+  
 

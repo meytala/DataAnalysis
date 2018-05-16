@@ -223,5 +223,61 @@ print("suffled b: ", np.random.shuffle(new_b)) #####################not working
 
 ##########final exercise
 
-  
+a = np.array([1,2,3])
+print("q1", a)
+b = a.astype(np.float)
+print("q2", b)
+a= np.arange(0,11)
+print("q3", a)
+a= np.linspace(0,23, 7)
+print("q4", a)
+a= np.ones((2,5,1,5,2,1)) * 5
+print("q5", a)
+a = np.squeeze(a)
+print("q6, a, shape of squeezed - eliminate the 1 Ds", a.shape)
+c =  a.reshape((10,10))
+print("q7, reshaping to 2 dimensions)", c)
+
+a= np.arange(10)
+b= np.arange(5)
+print("Q8", np.concatenate((a[:5],b[::-1] )))
+
+a = np.random.normal(21, 4.5, size=(3,3,12,3))
+print("q9", a)
+
+print("q 10, mean", a.mean())
+print("q 10, var", a.var())
+print("q 10, std", a.std())
+print("q 10, min", a.min())
+print("q 10, max", a.max())
+
+
+print("q 11, mean", a.mean(1))
+print("q 11, var", a.var(1))
+print("q 11, std", a.std(1))
+print("q 11, min", a.min(1))
+print("q 11, max", a.max(1))
+
+
+a = np.ndarray.flatten(a)
+print("q12", a)
+
+b = a[(a>15) & (a<26)]
+print("q13", b)
+
+b= np.clip(a, 15,26)
+print( b)
+b[b==15]=np.nan
+b[b==26]=np.nan
+print("Q14", b)
+
+print("q15", np.nansum(b))
+print("q16", np.nanmean(b))
+
+c = np.nan_to_num(b)
+print("q17", c)
+np.savetxt("text.txt",c)
+new_c = np.loadtxt("text.txt", delimiter=',')
+print("q18, loaded text", new_c )
+
 

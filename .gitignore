@@ -1,5 +1,6 @@
 
 *.xml
-.idea
+**\.idea
 *.iml
-*.xml
+.idea/DataAnalysis.iml
+.idea/workspace.xml
